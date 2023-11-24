@@ -38,7 +38,10 @@ const page = () => {
 
   async function checkAddress() {
     try {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const provider = new ethers.providers.AlchemyProvider(
+        "maticmum",
+        "mrvXire3FFkkoWo_HFHsBmRpJDRh1snd"
+      );
 
       const contract = new ethers.Contract(
         ZrChain.address,
